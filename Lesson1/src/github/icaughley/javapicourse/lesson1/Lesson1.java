@@ -39,7 +39,7 @@ public class Lesson1
       messageTimer.cancel();
     }
 
-    if ( now.endsWith( "5" ) )
+    if ( now.endsWith( "5:00" ) )
     {
       messageTimer = new Timer();
       messageTimer.schedule( new PrintToOutTimerTask( MESSAGE ), 0, THIRTY_SECONDS );
