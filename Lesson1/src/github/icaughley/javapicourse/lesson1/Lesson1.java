@@ -67,6 +67,6 @@ public class Lesson1
   private String now()
   {
     final Calendar cal = Calendar.getInstance();
-    return String.format( "%02d:%02d", cal.get( Calendar.HOUR ), cal.get( Calendar.MINUTE ) );
+    return String.format( "%02d:%02d:%02d", cal.get( Calendar.HOUR ), cal.get( Calendar.MINUTE ), cal.get( Calendar.SECOND ) );
   }
 }
