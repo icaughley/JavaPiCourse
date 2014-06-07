@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lesson1.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Lesson1.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/Lesson1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1377">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            <state vertical-scroll-proportion="-0.14529915" vertical-offset="663" max-vertical-offset="1258">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CallBackable.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CallBackable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/CallBackable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17435898" vertical-offset="0" max-vertical-offset="585">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
@@ -78,8 +78,8 @@
         <option value="$PROJECT_DIR$/src/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/CallBackable.java" />
         <option value="$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/CallBackable.java" />
-        <option value="$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/Lesson1.java" />
         <option value="$PROJECT_DIR$/HelloWorld.jad" />
+        <option value="$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/Lesson1.java" />
       </list>
     </option>
   </component>
@@ -497,12 +497,12 @@
       <workItem from="1402098396957" duration="2247000" />
       <workItem from="1402100681616" duration="1602000" />
       <workItem from="1402102314834" duration="201000" />
-      <workItem from="1402103613725" duration="49000" />
+      <workItem from="1402103613725" duration="1617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10602000" />
+    <option name="totallyTimeSpent" value="12170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -770,18 +770,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/Lesson1.java">
+    <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/CallBackable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/CallBackable.java">
+    <entry file="file://$PROJECT_DIR$/src/github/icaughley/javapicourse/lesson1/Lesson1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17435898" vertical-offset="0" max-vertical-offset="585">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.14529915" vertical-offset="663" max-vertical-offset="1258">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding />
         </state>
       </provider>

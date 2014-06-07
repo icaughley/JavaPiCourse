@@ -10,23 +10,22 @@ public class Lesson1
   extends MIDlet
   implements CallBackable
 {
+  public static final int FIVE_MINUTES = 1000 * 60 * 5;
+  public static final int THIRTY_SECONDS = 30000;
+  public static final String MESSAGE = "Listening...";
 
-  private CallBackTimerTask callBackTask;
-  private PrintToOutTimerTask messageTask;
+  private volatile Timer messageTimer;
 
   protected void startApp()
     throws MIDletStateChangeException
   {
-    System.out.println( "Start!" );
-    callBackTask = new CallBackTimerTask();
-    callBackTask.addCallBack( this );
-    messageTask = new PrintToOutTimerTask( "Listening..." );
-
-    final Date startTime = calcNext5MinBoundary();
-
     System.out.println( "StartTime: " + now() );
 
-    new Timer().scheduleAtFixedRate( callBackTask, startTime, 1000*60*5 );
+    CallBackTimerTask callBackTask = new CallBackTimerTask();
+    callBackTask.addCallBack( this );
+
+    final Date startTime = calcNext5MinBoundary();
+    new Timer().scheduleAtFixedRate( callBackTask, startTime, FIVE_MINUTES );
   }
 
   public void callBack()
@@ -35,13 +34,15 @@ public class Lesson1
 
     System.out.println( "Time: " + now );
 
+    if ( messageTimer != null )
+    {
+      messageTimer.cancel();
+    }
+
     if ( now.endsWith( "5" ) )
     {
-      new Timer().schedule( messageTask, 0, 30000 );
-    }
-    else
-    {
-      messageTask.cancel();
+      messageTimer = new Timer();
+      messageTimer.schedule( new PrintToOutTimerTask( MESSAGE ), 0, THIRTY_SECONDS );
     }
   }
 
@@ -49,13 +50,9 @@ public class Lesson1
     throws MIDletStateChangeException
   {
     System.out.println( "Destroy!" );
-    if ( callBackTask != null )
+    if ( messageTimer != null )
     {
-      callBackTask.cancel();
-    }
-    if ( messageTask != null )
-    {
-      messageTask.cancel();
+      messageTimer.cancel();
     }
   }
 
@@ -70,6 +67,6 @@ public class Lesson1
   private String now()
   {
     final Calendar cal = Calendar.getInstance();
-    return String.format( "%2d:%2d", cal.get( Calendar.HOUR ), cal.get( Calendar.MINUTE ) );
+    return String.format( "%02d:%02d", cal.get( Calendar.HOUR ), cal.get( Calendar.MINUTE ) );
   }
 }
