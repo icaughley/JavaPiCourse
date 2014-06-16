@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="J2ME_MODULE" version="4">
+  <component name="J2ME Module Properties">
+    <mobileApplicationType name="MIDP" />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="com.intellij.j2meplugin.module.settings.midp.MIDPSettings">
+    <setting name="MIDlet-1" module.settings.user.defined.value="Lesson2,,github.icaughley.javapicourse.lesson2.Lesson2" />
+    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="8659" />
+    <setting name="MIDlet-Jar-URL" module.settings.user.defined.value="Lesson2.jar" />
+    <setting name="MIDlet-Name" module.settings.user.defined.value="Lesson2" />
+    <setting name="MIDlet-Vendor" module.settings.user.defined.value="My Vendor" />
+    <setting name="MIDlet-Version" module.settings.user.defined.value="1.0" />
+    <setting name="MicroEdition-Configuration" module.settings.user.defined.value="CLDC-1.8" />
+    <setting name="MicroEdition-Profile" module.settings.user.defined.value="MEEP-8.0" />
+    <jarUrl jarUrlName="$MODULE_DIR$/Lesson2.jar" />
+    <descriptionPath path="$MODULE_DIR$/Lesson2.jad" useUserDescriptor="false" />
+    <manifest useUserManifest="false" />
+    <userDefinedOptions>
+      <option module.settings.user.defined.key="MIDlet-Permission-1" module.settings.user.defined.value="jdk.dio.DeviceMgmtPermission &quot;*:*&quot; &quot;open&quot;" />
+      <option module.settings.user.defined.key="MIDlet-Permission-2" module.settings.user.defined.value="jdk.dio.i2cbus.I2CPermission &quot;*:*&quot; &quot;&quot;" />
+    </userDefinedOptions>
+  </component>
+</module>
+
