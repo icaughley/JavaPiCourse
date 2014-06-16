@@ -43,8 +43,8 @@ public class BMP180Sensor
   //Variable common between temperature & pressure calculations
   protected int B5;
   // Shared ByteBuffers
-  private ByteBuffer uncompTemp = ByteBuffer.allocateDirect( 2 );
-
+  private ByteBuffer temperatureReadBuffer = ByteBuffer.allocateDirect( 2 );
+  private ByteBuffer pressureReadBuffer = ByteBuffer.allocateDirect( 3 );
 
   /**
    * BMP180 constructor invokes the parent constructor to initialize the
@@ -150,8 +150,8 @@ public class BMP180Sensor
     }
 
     //Read uncompressed data
-    uncompTemp.clear();
-    int result = getDevice().read( TEMP_ADDR, SUB_ADDRESS_SIZE, uncompTemp );
+    temperatureReadBuffer.clear();
+    int result = getDevice().read( TEMP_ADDR, SUB_ADDRESS_SIZE, temperatureReadBuffer );
     if ( result < 2 )
     {
       System.out.println( "Not enough data for temperature read" );
@@ -159,8 +159,8 @@ public class BMP180Sensor
 
     // Get the uncompensated temperature as a signed two byte word
     byte[] data = new byte[ 2 ];
-    uncompTemp.rewind();
-    uncompTemp.get( data );
+    temperatureReadBuffer.rewind();
+    temperatureReadBuffer.get( data );
     final int UT = ( ( data[ 0 ] << 8 ) & 0xFF00 ) + ( data[ 1 ] & 0xFF );
 
     // Calculate the actual temperature
@@ -205,8 +205,8 @@ public class BMP180Sensor
     }
 
     // Read the uncompensated pressure value
-    ByteBuffer uncompPress = ByteBuffer.allocateDirect( 3 );
-    int result = getDevice().read( PRESS_ADDR, SUB_ADDRESS_SIZE, uncompPress );
+    pressureReadBuffer.clear();
+    int result = getDevice().read( PRESS_ADDR, SUB_ADDRESS_SIZE, pressureReadBuffer );
     if ( result < 3 )
     {
       System.out.println( "Couldn't read all bytes, only read = " + result );
@@ -214,10 +214,10 @@ public class BMP180Sensor
     }
 
     // Get the uncompensated pressure as a three byte word
-    uncompPress.rewind();
+    pressureReadBuffer.rewind();
 
     byte[] data = new byte[ 3 ];
-    uncompPress.get( data );
+    pressureReadBuffer.get( data );
 
     final int UP = ( ( ( ( data[ 0 ] << 16 ) & 0xFF0000 ) + ( ( data[ 1 ] << 8 ) & 0xFF00 ) + ( data[ 2 ] & 0xFF ) ) >>
                      ( 8 - BAROMETER_OVERSAMPLE_SETTING ) );
